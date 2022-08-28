@@ -68,4 +68,21 @@
     margin-right: 2%;
 }
 
+@media only screen and (max-width: 1024px) {
+    .productsContainer {
+        grid: 1fr / 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .productsContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .productCard {
+        margin-top: 9%;
+    }
+    
+}
 

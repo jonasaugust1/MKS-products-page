@@ -11,7 +11,7 @@ export default function CartItems(){
     const productsInCart = useAppSelector((state) => state.cart.productsInCart)
 
     return (
-            <div>
+            <>
               {productsInCart.length > 0 ? (
                   productsInCart.map((product) => (
                     <div key={product.id} className={styles.productContainer}>
@@ -37,9 +37,9 @@ export default function CartItems(){
                         -
                         </button>
                         
-                        <div>
+                        {/* <div> */}
                           <span>{product.quantity}</span>
-                        </div>
+                        {/* </div> */}
   
                         <button  
                             onClick={() => dispatch(addItemToCart(product))}
@@ -50,7 +50,7 @@ export default function CartItems(){
                       </div>
   
                       <div>
-                        <span>R$ {product.quantity * product.price}</span>
+                        <span className={styles.itemPrice}>R$ {product.quantity * product.price}</span>
                       </div>
   
                       <button 
@@ -66,6 +66,6 @@ export default function CartItems(){
                     <p>Nenhum item no carrinho</p>
                   </div>
                 )}
-            </div>
+            </>
     )
   }

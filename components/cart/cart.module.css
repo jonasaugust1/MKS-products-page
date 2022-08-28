@@ -25,11 +25,9 @@
     margin-left: 2%;
 }
 
-.cartHeader div {
+.itemsContainer{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 30%;
+    justify-content: center;
 }
 
 .close {
@@ -49,9 +47,21 @@
     position: absolute;
     bottom: 14%;
     display: flex;
+    justify-content: space-between;
     font-weight: 700;
     font-size: 1.2rem;
+    width: 100%;
 }
+
+.total span:nth-child(1) {
+    margin-left: 5%;
+}
+
+
+.total span:nth-child(2) {
+    margin-right: 5%;
+}
+
 
 .buyBtn {
     position: absolute;
@@ -65,3 +75,16 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 1024px) {
+    .cart{
+        width: 40vw;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .cart{
+        width: 60vw;
+    }
+    
+}

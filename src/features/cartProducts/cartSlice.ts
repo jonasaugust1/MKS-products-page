@@ -22,11 +22,12 @@ export const cartSlice = createSlice({
             if(!productInCart){
                 state.productsInCart.push({...action.payload, quantity: 1})
 
-                state.productsInCart.reduce(
+                state.cartTotalAmount = state.productsInCart.reduce(
                     (previous, current) => previous += current.price * current.quantity, 0)
+
             } else {
                 productInCart.quantity++
-                state.cartTotalAmount = state.productsInCart.reduce(
+                state.cartTotalAmount = state.cartTotalAmount = state.productsInCart.reduce(
                     (previous, current) => previous += current.price * current.quantity, 0)
             }
         },
