@@ -1,0 +1,45 @@
+/* PRODUCTS */
+.productContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    background-color: #FFFFFF;
+    color:#000000;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.imageContainer {
+    width: 30%;
+}
+
+.nameContainer {
+    width: 20%;
+}
+
+.quantityContainer {
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.quantityContainer button {
+    background-color: transparent;
+    border: none;
+}
+
+.quantityContainer div {
+    border-left: 0.5px solid gray;
+    border-right: 0.5px solid gray;
+}
+
+.removeItem {
+    width: 5%;
+    background-color: #000000;
+    border-radius: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
