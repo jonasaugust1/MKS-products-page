@@ -28,15 +28,18 @@
 }
 
 .quantityContainer button {
+    display: flex;
+    justify-content: center;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 10%;
+    width: 8%;
     font-weight: 700;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
-.quantityContainer span {
+.quantity {
     border-left: 0.5px solid gray;
     border-right: 0.5px solid gray;
     width: 40%;
@@ -70,18 +73,21 @@
     .quantityContainer {
         display: flex;
         flex-direction: column-reverse;
-        width: 8%;
-        height: 50%;
+        width: 6%;
+        height: 70%;
     }
 
     .quantityContainer button {
-        overflow: visible;
         text-align: center;
+        width: 100%;
     }
     
-    .quantityContainer span {
+    .quantity {
+        display: flex;
+        justify-content: center;
         font-size: 0.5rem;
-        height: 5%;
+        width: 100%;
+        height: 30%;
     }
 
     .itemPrice {

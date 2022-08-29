@@ -38,7 +38,7 @@ export default function CartItems(){
                         </button>
                         
                         {/* <div> */}
-                          <span>{product.quantity}</span>
+                          <span className={styles.quantity}>{product.quantity}</span>
                         {/* </div> */}
   
                         <button  
