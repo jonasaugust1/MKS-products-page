@@ -1,6 +1,6 @@
 import {useEffect} from 'react'
 import { useAppSelector, useAppDispatch } from '../../hooks/hooks'
-import { openCart } from '../../src/features/cartProducts/cartSlice'
+import { openCart } from '../../src/features/cartSlice'
 import CartItems from '../cartItems/cartItems'
 import styles from './cart.module.css'
 

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
 import styles from './header.module.css'
-import { openCart } from '../../src/features/cartProducts/cartSlice'
+import { openCart } from '../../src/features/cartSlice'
 
 export default function Header(){
     const productsInCart = useAppSelector((state) => state.cart.productsInCart)

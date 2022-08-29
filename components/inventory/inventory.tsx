@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from './inventory.module.css'
 import {GetProductResults, Product} from '../../utils/types'
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
-import { addItemToCart } from '../../src/features/cartProducts/cartSlice'
+import { addItemToCart } from '../../src/features/cartSlice'
 
 export default function Inventory({products}: GetProductResults) {
     
