@@ -46,12 +46,20 @@ export const cartSlice = createSlice({
                 .reduce((previous, current) => previous += current.price * current.quantity, 0)
             }
         },
+        deleteProductFromCart: (state, action: PayloadAction<Product>) => {
+
+            state.productsInCart = state.productsInCart.filter(product => product.id !== action.payload.id)
+
+            state.cartTotalAmount = state.productsInCart
+                .reduce((previous, current) => previous += current.price * current.quantity, 0)
+
+        },
         openCart: (state, action: PayloadAction<boolean>) => {
             state.isCartOpen = action.payload
         }
     }
 })
 
-export const {addItemToCart, deleteItemFromCart, openCart} = cartSlice.actions
+export const {addItemToCart, deleteItemFromCart, deleteProductFromCart, openCart} = cartSlice.actions
 
 export default cartSlice.reducer

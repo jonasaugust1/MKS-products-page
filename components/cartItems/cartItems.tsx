@@ -1,5 +1,5 @@
 import { useAppSelector } from '../../hooks/hooks'
-import { addItemToCart , deleteItemFromCart } from '../../src/features/cartProducts/cartSlice'
+import { addItemToCart , deleteItemFromCart, deleteProductFromCart } from '../../src/features/cartProducts/cartSlice'
 import { useAppDispatch } from '../../hooks/hooks'
 import Image from 'next/image'
 import styles from './cartItems.module.css'
@@ -55,7 +55,7 @@ export default function CartItems(){
   
                       <button 
                         className={styles.removeItem}
-                        onClick={() => dispatch(deleteItemFromCart(product))}
+                        onClick={() => dispatch(deleteProductFromCart(product))}
                       >
                         X
                       </button>

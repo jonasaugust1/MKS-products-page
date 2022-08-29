@@ -37,9 +37,8 @@
     background-color: #000000;
     border-radius: 100%;
     width: 30%;
-    height: 30%;
+    margin-top: 20%;
     color:#FFFFFF;
-    margin: 0 auto;
     cursor: pointer;
 }
 
