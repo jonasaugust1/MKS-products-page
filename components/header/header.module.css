@@ -14,7 +14,6 @@
 
 .logo h1, .logo span {
     display: inline-block;
-    
     color: #FFFFFF;
 }
 
@@ -65,5 +64,14 @@
 
     .cart{
         width: 42%;
+    }
+
+    .logo h1 {
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .logo span{
+        margin-bottom: 5%;
     }
 }
