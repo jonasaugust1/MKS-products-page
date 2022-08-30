@@ -1,17 +1,18 @@
 import Image from 'next/image'
 import styles from './inventory.module.css'
-import {GetProductResults, Product} from '../../utils/types'
+import {GetProductResults} from '../../utils/types'
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
-import { addItemToCart } from '../../src/features/cartSlice'
+import { addItemToCart, openCart} from '../../src/features/cartSlice'
 
 export default function Inventory({products}: GetProductResults) {
     
     const dispatch = useAppDispatch()
 
-  const productsInCart = useAppSelector((state) =>
-    state.cart.productsInCart.filter((product) => product.id === product.id)
-  )
+    const productsInCart = useAppSelector((state) =>
+        state.cart.productsInCart.filter((product) => product.id === product.id)
+    )
 
+    const isCartOpen = useAppSelector((state) => state.cart.isCartOpen)
 
     return (
         <div className={styles.productsContainer}>
@@ -42,7 +43,10 @@ export default function Inventory({products}: GetProductResults) {
 
                 <p>{product.description}</p>
                     
-                <button className={styles.buyBtn} onClick={() => dispatch(addItemToCart(product))}>
+                <button className={styles.buyBtn} onClick={() => {
+                    dispatch(addItemToCart(product))
+                    dispatch(openCart(!isCartOpen))
+                }}>
 
                     <div>
                         <Image
